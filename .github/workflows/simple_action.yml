@@ -1,0 +1,10 @@
+name: simple-github-actions
+
+on: [push]
+
+jobs: # object
+  simple-job:
+    runs-on: ubuntu-latest
+    steps: # array
+      - name: echo a string
+        run: echo "Hello Github actions!!!"
