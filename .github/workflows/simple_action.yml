@@ -8,3 +8,11 @@ jobs: # object
     steps: # array
       - name: echo a string
         run: echo "Hello Github actions!!!"
+
+  simple-job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: mulple line commands
+        run: |
+          npm -v
+          node -v
