@@ -1,0 +1,16 @@
+name: example-use-action
+
+on: [push]
+
+jobs:
+  job-use-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: try-use-action
+        id: time-output
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: "hello gopi"
+
+      - name: log-date-output
+        run: echo "${{ steps.time-output }}"
