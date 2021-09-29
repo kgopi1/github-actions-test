@@ -1,19 +1,11 @@
-name: gopi
-age: 12
-activity: true
-string: "test string"
-key:
-  key1: value1
-  key2: value2
-array:
-  - item1
-  - item2
-objectarray:
-  - key1: value1
-  - key2: value2
-longtext: >
-  this is test message
-  from gopi in vscode
-multpleline: |
-  this is test message
-  from gopi in vscode
+{
+  "name": "gopi",
+  "age": 12,
+  "activity": true,
+  "string": "test string",
+  "key": { "key1": "value1", "key2": "value2" },
+  "array": ["item1", "item2"],
+  "objectarray": [{ "key1": "value1" }, { "key2": "value2" }],
+  "longtext": "this is test message from gopi in vscode\n",
+  "multpleline": "this is test message\nfrom gopi in vscode\n",
+}

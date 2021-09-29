@@ -14,3 +14,6 @@ jobs:
 
       - name: log-date-output
         run: echo "${{ steps.greet.outputs.time }}"
+
+      - name: list env values
+        run: env
