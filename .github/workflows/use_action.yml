@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: try-use-action
-        id: time-output
+        id: greet
         uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: "hello gopi"
 
       - name: log-date-output
-        run: echo "${{ steps.time-output }}"
+        run: echo "${{ steps.greet.outputs.time }}"
