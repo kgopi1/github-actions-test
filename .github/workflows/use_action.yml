@@ -1,6 +1,6 @@
 name: example-use-action
 
-on: [push]
+on: [pull_request]
 
 jobs:
   job-use-action:
