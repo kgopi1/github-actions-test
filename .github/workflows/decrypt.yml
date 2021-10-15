@@ -1,0 +1,15 @@
+name: decrypt the file
+on: push
+jobs:
+  decrypt_file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: decrypt-file
+        env:
+          passpharse: ${{ secrets.PASSPHARSE }}
+        run: |
+          gpg --quiet --batch --yes --decrypt --passphrase=${passpharse} gopi_secets.txt.gpg --output ${HOME}/gopi.txt
+      - name: print the file
+        run: |
+          cat ${HOME}/gopi.txt
