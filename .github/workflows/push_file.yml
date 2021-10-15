@@ -18,3 +18,8 @@ jobs:
           git branch --set-upstream-to=origin/master
           git pull
           ls -la
+          echo $RANDOM >>random.txt
+          ls -la
+          git add -A
+          git commit -m "added the randomfile"
+          git push
