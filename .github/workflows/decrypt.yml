@@ -9,7 +9,7 @@ jobs:
         env:
           passpharse: ${{ secrets.PASSPHARSE }}
         run: |
-          gpg --quiet --batch --yes --decrypt --passphrase=${passpharse} gopi_secets.txt.gpg --output ${HOME}/gopi.txt
+          gpg --quiet --batch --yes --decrypt --passphrase="${passpharse}" --output ${HOME}/gopi.txt gopi_secets.txt.gpg
       - name: print the file
         run: |
           cat ${HOME}/gopi.txt
