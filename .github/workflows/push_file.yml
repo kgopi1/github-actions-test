@@ -3,18 +3,18 @@ on: push
 
 jobs:
   push-file:
-  runs-on: ubuntu-latest
-  steps:
-    - name: push-a-file
-      run: |
-        pwd
-        ls -la
-        git init 
-        git remote add origin "https://${{ GITHUB_ACTOR }}/${{ secrets.GITHUB_TOKEN }}@github.com"/${{ GITHUB_REPOSITORY }}
-        git config --user.email mybot@mybot.com 
-        git config --user.name mybot
-        git fetch
-        git checkout master
-        git branch --set-upstream-to=origin/master
-        git pull
-        ls -la
+    runs-on: ubuntu-latest
+    steps:
+      - name: push-a-file
+        run: |
+          pwd
+          ls -la
+          git init 
+          git remote add origin "https://${{ GITHUB_ACTOR }}/${{ secrets.GITHUB_TOKEN }}@github.com"/${{ GITHUB_REPOSITORY }}
+          git config --user.email mybot@mybot.com 
+          git config --user.name mybot
+          git fetch
+          git checkout master
+          git branch --set-upstream-to=origin/master
+          git pull
+          ls -la
