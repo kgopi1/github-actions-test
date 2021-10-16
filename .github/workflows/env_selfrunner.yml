@@ -1,0 +1,15 @@
+name: env-variable-lab
+on: push
+env:
+  WF_ENV: "Workflow Variable"
+jobs:
+  print-env-variable:
+    runs-on: self-hosted
+    env:
+      job_ENV: "Job Variable"
+    steps:
+      - name: print-env-variables
+        run: |
+          echo "WorkFlow_Variable: ${WF_ENV}"
+          echo "Job_Variable: ${job_ENV}"
+          echo $(env)
