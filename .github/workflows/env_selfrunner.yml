@@ -1,4 +1,4 @@
-name: env-variable-lab
+name: env-variable-lab-selfrunner
 on: push
 env:
   WF_ENV: "Workflow Variable"
