@@ -12,10 +12,10 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
       - name: Get the installed node version
-        run: npm -v
+        run: node -v
       - name: Install specific node version
         uses: actions/setup-node@v1
         with:
           node-version: ${{  matrix.node_version  }}
       - name: Get the current node version
-        run: npm -v
+        run: node -v
