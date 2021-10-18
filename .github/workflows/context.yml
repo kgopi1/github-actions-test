@@ -5,7 +5,9 @@ on: [push]
 jobs:
   contextjob:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_CONTEXT: ${{ toJSON(github) }}
     steps:
       - name: DumpGithub-context
         run: |
-          echo "${{  github.ref }}"
+          echo "$GITHUB_CONTEXT"
