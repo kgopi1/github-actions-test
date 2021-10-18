@@ -1,6 +1,21 @@
-name: matrix-pipeline
+name: matrix-workflow
 
 on: [push]
 
-stragey:
-  matrix:
+jobs:
+  matrix-example:
+    runs-on: ${{  matrix.os  }}
+    strategy:
+      fail-fast: true
+      matrix:
+        node_version: [6, 8, 10]
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    steps:
+      - name: Get the installed node version
+        run: npm -v
+      - name: Install specific node version
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{  matrix.node_version  }}
+      - name: Get the current node version
+        run: npm -v
