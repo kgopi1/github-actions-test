@@ -10,4 +10,7 @@ jobs:
     steps:
       - name: DumpGithub-context
         run: |
-          echo "$GITHUB_CONTEXT"
+          echo "$GITHUB_CONTEXT" # To call env variable , just use $ not {} needed.
+      - name: Get-the Github-event
+        run: |
+          echo "${{ github.event }}"
