@@ -2,7 +2,7 @@ name: decrypt the file
 on: pull_request
 jobs:
   decrypt_file:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # public hosted runner
     steps:
       - uses: actions/checkout@v1
       - name: decrypt-file

@@ -1,10 +1,10 @@
 name: env-variable-lab-selfrunner
-on: push
+on: pull_request
 env:
   WF_ENV: "Workflow Variable"
 jobs:
   print-env-variable:
-    runs-on: self-hosted
+    runs-on: self-hosted # self hosted runner
     env:
       job_ENV: "Job Variable"
     steps:

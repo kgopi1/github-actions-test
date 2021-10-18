@@ -1,0 +1,11 @@
+name: context
+
+on: [push]
+
+jobs:
+  contextjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DumpGithub-context
+        run: |
+          echo "${{  github.context}  }"
