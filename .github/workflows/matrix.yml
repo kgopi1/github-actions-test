@@ -1,0 +1,6 @@
+name: matrix-pipeline
+
+on: [push]
+
+stragey:
+  matrix:
