@@ -13,4 +13,5 @@ jobs:
       #       echo "$GITHUB_CONTEXT" # To call env variable , just use $ not {} needed.
       - name: Get-the Github-event
         run: |
-          echo "${{ toJSON(github.event) }}"
+          echo "${{ toJSON(github.event) }}" # github.event is object , hence it needs 
+          # it needs to converted into json and print it .
