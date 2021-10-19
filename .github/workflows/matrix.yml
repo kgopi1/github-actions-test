@@ -2,6 +2,10 @@ name: matrix-workflow
 
 on: [push]
 
+env:
+  prod: "prod"
+  dev: "dev"
+
 jobs:
   matrix-example:
     runs-on: ${{  matrix.os  }}

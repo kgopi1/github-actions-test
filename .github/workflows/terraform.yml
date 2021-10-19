@@ -1,0 +1,16 @@
+name: terraform-pipeline
+
+on: [push]
+
+jobs:
+  terraform-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.4
+      - name: verify the Terraform installation
+        run: terraform -version
