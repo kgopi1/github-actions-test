@@ -8,9 +8,15 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+
       - name: Install Terraform
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: 1.0.4
+
       - name: verify the Terraform installation
         run: terraform -version
+
+      - name: Run terraform plan
+        run: terraform plan
+        working-directory: terraform
